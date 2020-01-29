@@ -1,7 +1,7 @@
 <?php
 namespace Trendwerk\Faker;
 
-use Nelmio\Alice\Fixtures\Loader;
+use Nelmio\Alice\Loader\NativeLoader;
 
 final class Faker
 {
@@ -11,7 +11,7 @@ final class Faker
     public function __construct($files)
     {
         $this->files = $files;
-        $this->loader = new Loader(get_locale(), [new Provider\Term]);
+        $this->loader = new NativeLoader(get_locale(), [new Provider\Term]);
     }
 
     public function persist(ProgressBar $progressBar)
