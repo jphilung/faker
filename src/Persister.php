@@ -1,7 +1,7 @@
 <?php
 namespace Trendwerk\Faker;
 
-use Nelmio\Alice\PersisterInterface;
+use Fidry\AliceDataFixtures\Persistence\PersisterInterface;
 
 final class Persister implements PersisterInterface
 {
