@@ -11,7 +11,7 @@ final class Faker
     public function __construct($files)
     {
         $this->files = $files;
-        $this->loader = new NativeLoader(get_locale(), [new Provider\Term]);
+        $this->loader = new NativeLoader();
     }
 
     public function persist(ProgressBar $progressBar)
