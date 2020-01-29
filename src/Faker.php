@@ -19,7 +19,7 @@ final class Faker
         $persister = new Persister($progressBar);
 
         foreach ($this->files as $file) {
-            $objects = $this->loader->load($file);
+            $objects = $this->loader->loadFile($file);
             $persister->persist($objects);
         }
     }
@@ -29,7 +29,7 @@ final class Faker
         $objects = [];
 
         foreach ($this->files as $file) {
-            $set = $this->loader->load($file);
+            $set = $this->loader->loadFile($file);
             $objects = array_merge($objects, $set);
         }
 
